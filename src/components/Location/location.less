@@ -1,0 +1,32 @@
+@import '../../less/mixin.less';
+
+.nav-tab.defaut.map {
+    position: static;
+    padding: 0.3125rem 0.40625rem;
+    background-color: #fff;
+    &:active {
+        background: @white-hover;
+    }
+    .item {
+        display: flex;
+        justify-content: center;
+        .iconfont {
+            .font-dpr(32px);
+            color: @main-color;
+            &.icon-map {
+                margin-right: 0.21875rem;
+            }
+        }
+        p {
+            flex: 1;
+            text-align: left;
+            .font-dpr(24px);
+            color: @default-color;
+            strong {
+                .font-dpr(32px);
+                color: @main-color;
+                font-weight: normal;
+            }
+        }
+    }
+}

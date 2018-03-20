@@ -1,0 +1,40 @@
+@fs: 75rem;
+.font-dpr(@font-size) {
+    [data-dpr="1"] & {
+        font-size: @font-size * .5;
+    }
+    [data-dpr="2"] & {
+        font-size: @font-size * 1;
+    }
+    [data-dpr="3"] & {
+        font-size: @font-size * 1.5;
+    }
+}
+
+.input-wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    height: 70/@fs;
+    margin-top: 90/@fs;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    overflow: hidden;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 0.40625rem;
+    .iconfont {
+        .font-dpr(32px);
+        line-height: 66/@fs;
+        margin-right: 0.21875rem;
+    }
+    .input-box {
+        box-sizing: border-box;
+        height: 70/@fs;
+        line-height: 70/@fs;
+        border: none;
+        outline: none;
+        width: 600/@fs;
+        height: 100%;
+        .font-dpr(24px);
+    }
+}

@@ -1,0 +1,44 @@
+@import '../../less/mixin.less';
+@fs: 75rem;
+.nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 162/@fs;
+    z-index: 99999;
+    background: @white;
+    height: 90/@fs;
+    line-height: 90/@fs;
+    border-bottom: 1px solid @border-color;
+    font-size: 0;
+    .item {
+        display: inline-block;
+        height: 90/@fs;
+        line-height: 90/@fs;
+        border-right: 1px solid @border-color;
+        text-align: center;
+        width: 49%;
+        color: @strong-color;
+        .font-dpr(28px);
+        &:last-of-type {
+            border: none;
+        }
+    }
+    .area-wrapper {
+        .font-dpr(28px);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 1.2rem;
+        background: #ebebeb;
+        li {
+            height: 1rem;
+            line-height: 1rem;
+            padding-left: 0.8rem;
+            border-bottom: 1px solid #e5e6e7;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}

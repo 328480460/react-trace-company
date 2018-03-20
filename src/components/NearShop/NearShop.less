@@ -1,0 +1,77 @@
+@import '../../less/mixin.less';
+@fs: 75rem;
+
+.panel-result {
+    .title {
+        .heihtall(0.9375rem);
+        padding-left: 0.5rem;
+    }
+}
+
+.nav-silder::-webkit-scrollbar {
+    display: none;
+}
+
+.choose-tab {
+    top: 252/@fs;
+    // height: 100%;
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    bottom: 0;
+    overflow-y: scroll;
+    .font-dpr(30px);
+    .nav-silder {
+        position: relative;
+        width: 3.75rem;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        background: @white;
+        li {
+            position: relative;
+            width: 100%;
+            .heihtall(1.40625rem);
+            padding: 0 0.46875rem;
+            &.on {
+                background: @choose-color;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    width: 6px;
+                    height: 100%;
+                    background: @main-color;
+                }
+            }
+        }
+    }
+    .nav-silder-right {
+        position: relative;
+        left: -1px;
+        height: 100%;
+        background: @choose-color;
+        overflow-y: scroll;
+        li {
+            padding: 0 0.34375rem;
+            .heihtall(1.40625rem);
+            &.on {
+                color: @main-color;
+            }
+        }
+    }
+}
+.shop-name {
+    font-size: 32/@fs !important;
+    color: #232323 !important;
+}
+.load-more {
+    text-align: center;
+    height: 80/@fs;
+    line-height: 80/@fs;
+    .font-dpr(26px);
+}
+.not-found {
+    text-align: center;
+    margin-top: 50/@fs;
+    .font-dpr(30px);
+}

@@ -1,0 +1,134 @@
+@main-color:#22ac38;
+@strong-color:#7c7c7c;
+@default-color:#969696;
+@defaut-bg-color:#ebebeb;
+@border-color:#ececec;
+@white:#fff;
+@white-hover:#f2f2f2;
+@choose-color:#f6f6f6;
+
+
+.font-dpr(@font-size) {
+    [data-dpr="1"] & {
+        font-size: @font-size * .5;
+    }
+    [data-dpr="2"] & {
+        font-size: @font-size * 1;
+    }
+    [data-dpr="3"] & {
+        font-size: @font-size * 1.5;
+    }
+}
+
+.heihtall(@value) {
+    height: @value;
+    line-height: @value;
+}
+
+.wx-boxflex {
+    display: flex;
+    justify-content: center;
+}
+
+.wx-flex-item {
+    flex: 1;
+}
+
+.wx-columnflex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.scroll-y {
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.wx-srcoll-body {
+    position: relative;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    background: @choose-color;
+}
+
+.nav-tab {
+    display: flex;
+    justify-content: center;
+    .item {
+        flex: 1;
+    }
+}
+
+.wx-data-list {
+    border-top: 1px solid @border-color;
+    border-bottom: 1px solid @border-color;
+    .font-dpr(28px);
+    .item-default {
+        padding: 0.375rem 0.5rem;
+        background: @white;
+        border-bottom: 1px solid @border-color;
+        &:last-of-type {
+            border: none;
+        }
+        .strong {
+            color: @strong-color;
+        }
+        span {
+            .font-dpr(24px);
+        }
+        &:active {
+            background: @white-hover;
+        }
+    }
+}
+
+.mar-t10 {
+    margin-top: 0.15625rem;
+}
+
+.text-overflow {
+    word-break: keep-all;
+    /* 不换行 */
+    white-space: nowrap;
+    /* 不换行 */
+    overflow: hidden;
+    /* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow: ellipsis;
+}
+
+
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.wx-title {
+    color: @strong-color;
+    line-height: 1rem;
+    padding-left: 0.3125rem;
+}
+
+.y-hidden {
+    overflow-y: hidden;
+}
